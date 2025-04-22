@@ -1,4 +1,9 @@
-# 🎟️ Event Booking App - `event_app`
+#!/bin/bash
+
+echo "✅ Generating README.md..."
+
+cat <<EOF > README.md
+# 🎟️ Event Booking App - \`event_app\`
 
 A full-featured Flutter application for **planning, searching, and booking events** with venue management, ticket generation, calendar integration, and Firebase-based feedback and authentication.
 
@@ -8,10 +13,10 @@ A full-featured Flutter application for **planning, searching, and booking event
 
 This app empowers users to:
 
-- 🔍 Discover and filter events by location, date, and type
-- 🏛️ Reserve venues for hosting events
-- 🎫 Book tickets and manage event entries
-- 📆 Use calendar UI for event schedules
+- 🔍 Discover and filter events by location, date, and type  
+- 🏛️ Reserve venues for hosting events  
+- 🎫 Book tickets and manage event entries  
+- 📆 Use calendar UI for event schedules  
 - 📝 Submit feedback with Firebase Auth integration
 
 ---
@@ -32,7 +37,7 @@ This app empowers users to:
 
 ## 📂 Project Structure
 
-```plaintext
+\`\`\`plaintext
 lib/
 ├── main.dart
 ├── models/
@@ -51,14 +56,18 @@ lib/
 ├── services/
 │   ├── api_service.dart
 │   └── firebase_service.dart
+\`\`\`
+
+---
+
 ## 🛠️ Getting Started
 
 ### ✅ Prerequisites
 
-- Flutter SDK (latest stable version)
-- Dart
-- Firebase project (Firestore + Authentication enabled)
-- Android Studio / VS Code
+- Flutter SDK (latest stable version)  
+- Dart  
+- Firebase project (Firestore + Authentication enabled)  
+- Android Studio / VS Code  
 
 ---
 
@@ -91,7 +100,7 @@ lib/
 
 4. **Enable Firebase Services**
 
-   - Go to **Firebase Console > Build > Authentication** → Enable **Email/Password** sign-in method.
+   - Go to **Firebase Console > Build > Authentication** → Enable **Email/Password** sign-in method.  
    - Go to **Firestore Database** → Create a new database in **test mode** or with proper rules.
 
 5. **Run the app**
@@ -150,4 +159,7 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 ## 📄 License
 
 This project is open-source under the [MIT License](LICENSE).
+
 EOF
+
+echo "✅ README.md created successfully!"
