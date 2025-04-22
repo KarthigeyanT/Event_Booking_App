@@ -1,0 +1,19 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /events/{eventId} {
+      allow read: if true; // Anyone can read events
+      allow create, update, delete: if request.auth != null; // Only authenticated users can modify
+    }
+
+    match /bookings/{bookingId} {
+      allow read: if request.auth != null; // Users can only see their own bookings
+      allow create: if request.auth != null;
+      allow update, delete: if false; // Bookings shouldn't be modified after creation
+    }
+
+    match /users/{userId} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+    }
+  }
+}

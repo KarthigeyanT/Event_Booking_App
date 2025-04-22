@@ -1,0 +1,1 @@
+{"firestore":{"rules":"firestore.rules","indexes":"firestore.indexes.json"},"emulators":{"firestore":{"port":8080},"ui":{"enabled":true}},"flutter":{"platforms":{"dart":{"lib/firebase_options.dart":{"projectId":"eventbookingapp-a72e8","configurations":{"web":"1:686140767497:web:fee28721f3af9a6975a7d8"}}}}}}

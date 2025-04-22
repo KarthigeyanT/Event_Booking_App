@@ -1,0 +1,31 @@
+lib/
+│
+├── main.dart                        # Entry point + route setup
+│
+├── models/                          # Dart classes (Phase 1)
+│   ├── event.dart                   # Event class with search/filter logic
+│   └── venue.dart                   # Venue booking data class
+│
+├── screens/                         # All app screens
+│   ├── home_screen.dart             # Navigation hub
+│   ├── event_search_screen.dart     # Phase 1: Event Search & Filter
+│   ├── venue_booking_screen.dart    # Phase 1: Venue Booking
+│   ├── ticket_screen.dart           # Phase 2: Ticket Generation
+│   ├── calendar_screen.dart         # Phase 3: Calendar Integration (animated)
+│   ├── feedback_screen.dart         # Phase 3: Feedback Form (Firebase)
+│   ├── login_screen.dart            # Phase 3: Firebase Auth
+│   └── signup_screen.dart
+│
+├── widgets/                         # Reusable components (Phase 1+)
+│   ├── event_card.dart              # For listing events
+│   └── venue_form.dart              # Venue booking form UI
+│
+├── services/                        # Logic for Firebase/API (Phase 3)
+│   ├── firebase_service.dart        # Feedback form, booking storage
+│   └── auth_service.dart            # Firebase login/signup
+│
+├── state/                           # Basic state management (Phase 2)
+│   └── app_state.dart               # Can use ScopedModel or setState
+│
+└── utils/
+    └── constants.dart               # App-wide constants: colors, categories, etc.

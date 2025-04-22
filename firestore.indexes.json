@@ -1,0 +1,20 @@
+{
+  "indexes": [
+    {
+      "collectionGroup": "events",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {"fieldPath": "date", "order": "ASCENDING"},
+        {"fieldPath": "title", "order": "ASCENDING"}
+      ]
+    },
+    {
+      "collectionGroup": "bookings",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {"fieldPath": "userId", "order": "ASCENDING"},
+        {"fieldPath": "eventId", "order": "ASCENDING"}
+      ]
+    }
+  ]
+}
