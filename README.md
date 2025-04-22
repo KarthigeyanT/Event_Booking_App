@@ -6,32 +6,51 @@ A full-featured Flutter application for **planning, searching, and booking event
 
 ## 📲 Overview
 
-This app allows users to:
+This app empowers users to:
 
-- Search and filter upcoming events
-- Book venues and generate tickets
-- View tickets and provide feedback
-- Use calendar UI for event scheduling
-- Authenticate and store data using Firebase
+- 🔍 Discover and filter events by location, date, and type
+- 🏛️ Reserve venues for hosting events
+- 🎫 Book tickets and manage event entries
+- 📆 Use calendar UI for event schedules
+- 📝 Submit feedback with Firebase Auth integration
 
 ---
 
-## 🚀 Features
+## 🚀 Key Features
 
-- 🔍 **Advanced Event Search & Filter**
-- 🏛️ **Venue Booking with Validation**
-- 🎫 **Ticket Generation with Navigation**
-- 📆 **Calendar Integration & UI Animations**
-- 🌐 **REST API for Dynamic Event Data**
-- 🔐 **Firebase Authentication & Feedback Form**
+| Feature                        | Description |
+|-------------------------------|-------------|
+| 🔍 Event Search & Filter       | Advanced search by category, date, and venue |
+| 🏛️ Venue Booking               | Secure venue booking with validation and availability check |
+| 🎫 Ticket Generation           | Instant ticket creation with unique IDs |
+| 📆 Calendar UI & Animations    | Schedule view with Flutter animations |
+| 🔐 Firebase Authentication     | Email/password login and secure access |
+| 📋 Feedback Form               | Submit experience feedback stored in Firestore |
+| 🌐 API Integration             | REST API fetch for live events (mock/dynamic) |
 
 ---
 
 ## 📂 Project Structure
-lib/ ├── main.dart ├── models/ │ ├── event.dart │ └── venue.dart ├── screens/ │ ├── home_screen.dart │ ├── booking_screen.dart │ ├── ticket_screen.dart │ └── feedback_screen.dart ├── widgets/ │ ├── event_card.dart │ └── custom_form.dart ├── services/ │ ├── api_service.dart │ └── firebase_service.dart
 
----
-
+```plaintext
+lib/
+├── main.dart
+├── models/
+│   ├── event.dart
+│   └── venue.dart
+├── screens/
+│   ├── home_screen.dart
+│   ├── login_screen.dart
+│   ├── signup_screen.dart
+│   ├── booking_screen.dart
+│   ├── ticket_screen.dart
+│   └── feedback_screen.dart
+├── widgets/
+│   ├── event_card.dart
+│   └── custom_form.dart
+├── services/
+│   ├── api_service.dart
+│   └── firebase_service.dart
 ## 🛠️ Getting Started
 
 ### ✅ Prerequisites
@@ -41,55 +60,94 @@ lib/ ├── main.dart ├── models/ │ ├── event.dart │ └─�
 - Firebase project (Firestore + Authentication enabled)
 - Android Studio / VS Code
 
+---
+
 ### 📦 Installation Steps
 
 1. **Clone the repository**
-   ```bash
+   \`\`\`bash
    git clone https://github.com/your-username/event_app.git
    cd event_app
+   \`\`\`
+
 2. **Install dependencies**
-   ```bash
+   \`\`\`bash
    flutter pub get
-3. Configure Firebase
+   \`\`\`
 
-Android:
+3. **Configure Firebase**
 
-Go to your Firebase console, create a new project.
+   - **Android**:
+     - Go to Firebase Console and create a new project.
+     - Register your Android app with the correct package name.
+     - Download the \`google-services.json\` file.
+     - Place it in the \`android/app/\` directory.
 
-Register your Android app with the correct package name.
+   - **iOS**:
+     - Register your iOS app in Firebase.
+     - Download the \`GoogleService-Info.plist\` file.
+     - Place it in the \`ios/Runner/\` directory.
+     - Open \`ios/Runner.xcworkspace\` in Xcode and add the plist if needed.
 
-Download the google-services.json file.
+4. **Enable Firebase Services**
 
-Place it in the android/app/ directory.
+   - Go to **Firebase Console > Build > Authentication** → Enable **Email/Password** sign-in method.
+   - Go to **Firestore Database** → Create a new database in **test mode** or with proper rules.
 
-iOS:
+5. **Run the app**
+   \`\`\`bash
+   flutter run
+   \`\`\`
 
-Register your iOS app in Firebase.
+---
 
-Download the GoogleService-Info.plist file.
+### ❗ Troubleshooting Tips
 
-Place it in the ios/Runner/ directory.
+- 🔁 If Firebase doesn’t initialize correctly, double-check config file paths.
+- 📱 If Android build fails, ensure \`minSdkVersion\` is set to **21 or higher** in \`android/app/build.gradle\`.
+- 🍎 For iOS:
+   \`\`\`bash
+   cd ios
+   pod install
+   cd ..
+   \`\`\`
 
-Open ios/Runner.xcworkspace in Xcode and add the plist if needed.
+---
 
-4. Enable Firebase Services
+## 📸 Screenshots
 
-Go to Firebase Console > Build > Authentication → Enable Email/Password sign-in method.
+### 🏠 Home Screen  
+![Home Screen](assets/screenshots/Home_screen.png)
 
-Go to Firestore Database → Create a new database in test mode or with proper rules.      
+---
 
-5.Run the app
-flutter run
+### 🔐 Login Screen  
+![Login Screen](assets/screenshots/Login_screen.png)
 
+---
 
-❗ Troubleshooting Tips
-If Firebase doesn’t initialize correctly, double-check that your config files are placed properly.
+### 📝 Signup Screen  
+![Signup Screen](assets/screenshots/Signup_screen.png)
 
-If Android build fails, ensure minSdkVersion in android/app/build.gradle is 21 or higher.
+---
 
-For iOS, ensure you have Cocoapods installed (sudo gem install cocoapods) and run
+### 🎫 Ticket Booked Confirmation  
+![Ticket Booked](assets/screenshots/Ticket_booked.png)
 
-cd ios
-pod install
-cd ..
+---
 
+### 🎟️ Ticket Display Screen  
+![Ticket Screen](assets/screenshots/Ticket_screen.png)
+
+---
+
+## 🙌 Contributions
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+---
+
+## 📄 License
+
+This project is open-source under the [MIT License](LICENSE).
+EOF
