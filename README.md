@@ -1,8 +1,4 @@
-#!/bin/bash
 
-echo "✅ Generating README.md..."
-
-cat <<EOF > README.md
 # 🎟️ Event Booking App - \`event_app\`
 
 A full-featured Flutter application for **planning, searching, and booking events** with venue management, ticket generation, calendar integration, and Firebase-based feedback and authentication.
